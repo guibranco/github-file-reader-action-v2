@@ -1,6 +1,13 @@
 <p align="center">
-  <a href="https://github.com/GuiBrancofile-reader-action-v2"><img alt="file-reader-action-v2 status" src="https://github.com/GuiBranco/file-reader-action-v2/workflows/build/badge.svg"></a>
-  <a href="https://wakatime.com/badge/github/guibranco/file-reader-action-v2"><img src="https://wakatime.com/badge/github/guibranco/file-reader-action-v2.svg" alt="wakatime"></a>
+  <a href="https://github.com/guibranco/github-file-reader-action-v2">
+    <img src="https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/ci.yml/badge.svg" alt="CI status">
+  </a>
+  <a href="https://github.com/guibranco/github-file-reader-action-v2">
+    <img src="https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/linter.yml/badge.svg" alt="Linter status">
+  </a>
+  <a href="https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2">
+    <img src="https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2.svg" alt="wakatime">
+  </a>
 </p>
 
 # GitHub File Reader Action V2
