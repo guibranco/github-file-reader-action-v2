@@ -14,14 +14,11 @@ jobs:
 
     - uses: actions/checkout@v4
 
-    - name: Npm install
-      run: npm install
-
     - name: Test
       uses: ./
       id: test
       with:
-        path: "package.json"
+        path: "README.md"
     
     - name: Test content
       run: echo "${{ steps.test.outputs.contents }}"
