@@ -1,8 +1,12 @@
-# file-reader-ation
+# GitHub File Reader Action V2
 
-> GitHub Action to read the contents of a file
+GitHub Action to read the contents of a file
 
-![build-test](https://github.com/andstor/file-reader-action/workflows/build/badge.svg)
+> **Warning**
+>
+>**Disclaimer** This version was created because the [original (V1)](https://github.com/andstor/file-reader-action) has not been updated by the creator for a while.
+
+![build-test](https://github.com/guibranco/file-reader-action-v2/workflows/build/badge.svg)
 
 This is a GitHub Action to read the contents of a file. Give it a path to a file and it provides you with the file's contents, accessible through an output variable.
 
