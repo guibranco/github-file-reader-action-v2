@@ -21,4 +21,4 @@ jobs:
         path: "package.json"
     
     - name: Test content
-      run: echo "${ steps.test.outputs.contents }"
+      run: echo "${{ steps.test.outputs.contents }}"
