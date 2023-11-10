@@ -123,22 +123,21 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-
 ## <img src='https://img.stackshare.io/group.svg' /> Open source packages (9)</h2>
 
 ## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (9)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[@types/jest](https://www.npmjs.com/@types/jest)|v29.5.7|11/06/23|dependabot[bot] |MIT|N/A|
-|[@types/node](https://www.npmjs.com/@types/node)|v20.8.10|11/06/23|dependabot[bot] |MIT|N/A|
-|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.9.1|11/06/23|dependabot[bot] |MIT|N/A|
-|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.9.1|11/06/23|dependabot[bot] |BSD-2-Clause|N/A|
-|[eslint-plugin-jest](https://www.npmjs.com/eslint-plugin-jest)|v27.6.0|11/06/23|dependabot[bot] |MIT|N/A|
-|[eslint-plugin-prettier](https://www.npmjs.com/eslint-plugin-prettier)|v5.0.1|11/06/23|dependabot[bot] |MIT|N/A|
-|[js-yaml](https://www.npmjs.com/js-yaml)|v3.14.1|09/17/23|dependabot[bot] |MIT|N/A|
-|[prettier-eslint](https://www.npmjs.com/prettier-eslint)|v16.1.2|11/06/23|dependabot[bot] |MIT|N/A|
-|[ts-jest](https://www.npmjs.com/ts-jest)|v29.1.1|11/06/23|dependabot[bot] |MIT|N/A|
+|[@types/jest](https://www.npmjs.com/@types/jest)|v29.5.7|11/06/23|dependabot\[bot] |MIT|N/A|
+|[@types/node](https://www.npmjs.com/@types/node)|v20.8.10|11/06/23|dependabot\[bot] |MIT|N/A|
+|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.9.1|11/06/23|dependabot\[bot] |MIT|N/A|
+|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.9.1|11/06/23|dependabot\[bot] |BSD-2-Clause|N/A|
+|[eslint-plugin-jest](https://www.npmjs.com/eslint-plugin-jest)|v27.6.0|11/06/23|dependabot\[bot] |MIT|N/A|
+|[eslint-plugin-prettier](https://www.npmjs.com/eslint-plugin-prettier)|v5.0.1|11/06/23|dependabot\[bot] |MIT|N/A|
+|[js-yaml](https://www.npmjs.com/js-yaml)|v3.14.1|09/17/23|dependabot\[bot] |MIT|N/A|
+|[prettier-eslint](https://www.npmjs.com/prettier-eslint)|v16.1.2|11/06/23|dependabot\[bot] |MIT|N/A|
+|[ts-jest](https://www.npmjs.com/ts-jest)|v29.1.1|11/06/23|dependabot\[bot] |MIT|N/A|
 
 <br/>
 <div align='center'>
