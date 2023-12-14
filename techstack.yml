@@ -1,11 +1,11 @@
 repo_name: guibranco/github-file-reader-action-v2
-report_id: 6f31b409ba0e5114a8d282ec7a039863
+report_id: 0b524b73e5b19f236cd6402e2b3a2519
 repo_type: Public
-timestamp: '2023-11-09T15:54:17+00:00'
+timestamp: '2023-12-14T09:37:55+00:00'
 requested_by: dependabot[bot]
 provider: github
 branch: main
-detected_tools_count: 18
+detected_tools_count: 20
 tools:
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -18,7 +18,7 @@ tools:
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
   website_url: http://www.typescriptlang.org
@@ -41,6 +41,17 @@ tools:
   detection_source: package.json
   last_updated_by: André Storhaug
   last_updated_on: 2020-04-27 14:19:59.000000000 Z
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source: dist/licenses.txt
+  last_updated_by: Guilherme Branco Stracini
+  last_updated_on: 2023-09-17 17:53:25.000000000 Z
 - name: ESLint
   description: The fully pluggable JavaScript code quality tool
   website_url: http://eslint.org/
@@ -70,7 +81,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source: ".github/workflows/size-label.yml"
+  detection_source: ".github/workflows/check-dist.yml"
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-10-30 18:16:25.000000000 Z
 - name: Jest
@@ -83,24 +94,24 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/830/jest.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: André Storhaug
   last_updated_on: 2020-04-27 14:19:59.000000000 Z
 - name: Prettier
   description: 'Prettier is an opinionated code formatter. '
   website_url: https://prettier.io/
-  version: 3.0.3
+  version: 3.1.1
   license: MIT
   open_source: true
   hosted_saas: false
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-10-30 18:26:43.000000000 Z
+  last_updated_on: 2023-12-12 20:23:50.000000000 Z
 - name: npm
   description: The package manager for JavaScript.
   website_url: https://www.npmjs.com/
@@ -112,62 +123,73 @@ tools:
   detection_source: package.json
   last_updated_by: André Storhaug
   last_updated_on: 2020-04-27 14:19:59.000000000 Z
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source: dist/licenses.txt
+  last_updated_by: Guilherme Branco Stracini
+  last_updated_on: 2023-09-17 17:53:25.000000000 Z
 - name: "@types/jest"
   description: TypeScript definitions for Jest
   package_url: https://www.npmjs.com/@types/jest
-  version: 29.5.7
+  version: 29.5.11
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15840/default_004658cda9b38934f2871435e9dc15608c86e8be.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: "@types/node"
   description: TypeScript definitions for Node.js
   package_url: https://www.npmjs.com/@types/node
-  version: 20.8.10
+  version: 20.10.4
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: "@typescript-eslint/eslint-plugin"
   description: TypeScript plugin for ESLint
   package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
-  version: 6.9.1
+  version: 6.14.0
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: "@typescript-eslint/parser"
   description: An ESLint custom parser which leverages TypeScript ESTree
   package_url: https://www.npmjs.com/@typescript-eslint/parser
-  version: 6.9.1
+  version: 6.14.0
   license: BSD-2-Clause
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: eslint-plugin-jest
   description: Eslint rules for Jest
   package_url: https://www.npmjs.com/eslint-plugin-jest
@@ -178,10 +200,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15996/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: eslint-plugin-prettier
   description: Runs prettier as an eslint rule
   package_url: https://www.npmjs.com/eslint-plugin-prettier
@@ -192,10 +214,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15896/default_6e6e1d6bb189c8bb26c6410618bd597979578f39.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: js-yaml
   description: YAML 1.2 parser and serializer
   package_url: https://www.npmjs.com/js-yaml
@@ -206,7 +228,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15997/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-09-17 04:28:43.000000000 Z
@@ -220,10 +242,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16517/default_4e3259350c525d1d859fa80a938000081d7c9db8.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:49:31.000000000 Z
+  last_updated_on: 2023-12-12 20:51:53.000000000 Z
 - name: ts-jest
   description: A preprocessor with source maps support to help use TypeScript with
     Jest
@@ -235,7 +257,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15864/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/guibranco/github-file-reader-action-v2/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 11:17:19.000000000 Z
+  last_updated_on: 2023-12-12 20:46:05.000000000 Z
