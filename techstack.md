@@ -10,8 +10,6 @@ guibranco/github-file-reader-action-v2 is built on the following main stack:
 - [ESLint](http://eslint.org/) – Code Review
 - [Prettier](https://prettier.io/) – Code Review
 - [GitHub Actions](https://github.com/features/actions) – Continuous Integration
-- [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
-- [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -28,8 +26,6 @@ guibranco/github-file-reader-action-v2 is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/11563/actions.png' alt='GitHub Actions'/> [GitHub Actions](https://github.com/features/actions) – Continuous Integration
-- <img width='25' height='25' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'/> [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
-- <img width='25' height='25' src='https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png' alt='pgvector'/> [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -40,7 +36,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [guibranco/github-file-reader-action-v2](https://github.com/guibranco/github-file-reader-action-v2)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|20<br/>Tools used|12/14/23 <br/>Report generated|
+|18<br/>Tools used|01/11/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -71,19 +67,6 @@ Full tech stack [here](/techstack.md)
   <img width='36' height='36' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'>
   <br>
   <sub><a href="http://nodejs.org/">Node.js</a></sub>
-  <br>
-  <sub></sub>
-</td>
-
-</tr>
-</table>
-
-## <img src='https://img.stackshare.io/databases.svg'/> Data (1)
-<table><tr>
-  <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png' alt='pgvector'>
-  <br>
-  <sub><a href="https://github.com/pgvector/pgvector/">pgvector</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -144,19 +127,6 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-## Other (1)
-<table><tr>
-  <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'>
-  <br>
-  <sub><a href="https://github.com/hwchase17/langchain">LangChain</a></sub>
-  <br>
-  <sub></sub>
-</td>
-
-</tr>
-</table>
-
 
 ## <img src='https://img.stackshare.io/group.svg' /> Open source packages (9)</h2>
 
@@ -164,15 +134,15 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[@types/jest](https://www.npmjs.com/@types/jest)|v29.5.11|12/12/23|dependabot[bot] |MIT|N/A|
-|[@types/node](https://www.npmjs.com/@types/node)|v20.10.4|12/12/23|dependabot[bot] |MIT|N/A|
-|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.14.0|12/12/23|dependabot[bot] |MIT|N/A|
-|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.14.0|12/12/23|dependabot[bot] |BSD-2-Clause|N/A|
-|[eslint-plugin-jest](https://www.npmjs.com/eslint-plugin-jest)|v27.6.0|12/12/23|dependabot[bot] |MIT|N/A|
-|[eslint-plugin-prettier](https://www.npmjs.com/eslint-plugin-prettier)|v5.0.1|12/12/23|dependabot[bot] |MIT|N/A|
+|[@types/jest](https://www.npmjs.com/@types/jest)|v29.5.11|01/08/24|dependabot[bot] |MIT|N/A|
+|[@types/node](https://www.npmjs.com/@types/node)|v20.10.7|01/08/24|dependabot[bot] |MIT|N/A|
+|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.18.0|01/08/24|dependabot[bot] |MIT|N/A|
+|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.18.0|01/08/24|dependabot[bot] |BSD-2-Clause|N/A|
+|[eslint-plugin-jest](https://www.npmjs.com/eslint-plugin-jest)|v27.6.1|01/08/24|dependabot[bot] |MIT|N/A|
+|[eslint-plugin-prettier](https://www.npmjs.com/eslint-plugin-prettier)|v5.1.2|01/08/24|dependabot[bot] |MIT|N/A|
 |[js-yaml](https://www.npmjs.com/js-yaml)|v3.14.1|09/17/23|dependabot[bot] |MIT|N/A|
-|[prettier-eslint](https://www.npmjs.com/prettier-eslint)|v16.1.2|12/12/23|dependabot[bot] |MIT|N/A|
-|[ts-jest](https://www.npmjs.com/ts-jest)|v29.1.1|12/12/23|dependabot[bot] |MIT|N/A|
+|[prettier-eslint](https://www.npmjs.com/prettier-eslint)|v16.2.0|01/08/24|dependabot[bot] |MIT|N/A|
+|[ts-jest](https://www.npmjs.com/ts-jest)|v29.1.1|01/08/24|dependabot[bot] |MIT|N/A|
 
 <br/>
 <div align='center'>
