@@ -45,5 +45,3 @@ jobs:
           TYPESCRIPT_DEFAULT_STYLE: prettier
           VALIDATE_JSCPD: false
           VALIDATE_CHECKOV: false
-
-VALIDATE_CHECKOV
