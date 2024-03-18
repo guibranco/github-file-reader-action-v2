@@ -18,7 +18,7 @@ GitHub Action to read the contents of a file
 >
 > **Disclaimer:** This version was created because the [original (V1)](https://github.com/andstor/file-reader-action) has not been updated by the creator for a while.
 
-This is a GitHub Action to read the contents of a file. Give it a path to a file and it provides you with the file's contents, accessible through an output variable.
+This is a GitHub Action that reads the contents of a file. Give it a path to a file, and it will provide you with its contents, accessible through an output variable.
 
 ## Usage
 
@@ -33,7 +33,7 @@ The following example [workflow step](https://help.github.com/en/actions/configu
 
 ## Options ⚙️
 
-The following input variables options can/must be configured:
+The following input variable options can/must be configured:
 
 |Input variable|Necessity|Description|Default|
 |----|----|----|----|
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Read file contents
         uses: guibranco/github-file-reader-action-v2@latest
@@ -69,6 +69,6 @@ jobs:
 
 ## License
 
-Copyright © 2023 [André Storhaug](https://github.com/andstor), [GuiBranco](https://github.com/guibranco).
+Copyright © 2024 [André Storhaug](https://github.com/andstor), [GuiBranco](https://github.com/guibranco).
 
 file-reader-action-v2 is licensed under the [MIT License](https://github.com/guibranco/github-file-reader-action-v2/blob/main/LICENSE).
