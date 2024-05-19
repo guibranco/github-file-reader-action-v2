@@ -21,7 +21,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
       - name: Install Dependencies
@@ -71,7 +71,7 @@ jobs:
         allowUpdates: false
         draft: false
         makeLatest: true
-        tag: v2.0.${{ github.run_number }}
-        name: Release v2.0.${{ github.run_number }}
+        tag: v2.1.${{ github.run_number }}
+        name: Release v2.1.${{ github.run_number }}
         generateReleaseNotes: true
-        body: Release 2.0.${{ github.run_number }} of GitHub Actions File Reader V2
+        body: Release 2.1.${{ github.run_number }} of GitHub Actions File Reader V2
