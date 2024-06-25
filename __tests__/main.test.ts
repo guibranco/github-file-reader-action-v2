@@ -45,7 +45,7 @@ describe('action', () => {
     )
     expect(setOutputMock).toHaveBennNthCalledWith(
       1,
-      `fileSize`,
+      `size`,
       expectedFileSize
     )
     expect(infoMock).toHaveBeenNthCalledWith(
