@@ -2766,6 +2766,10 @@ async function run() {
     try {
         const filePath = core.getInput('path');
         const encoding = core.getInput('encoding');
+        const stats = fs_1.default.statSync(filePath);
+        const fileSize = stats.size;
+        core.info(`File size:\n${fileSize}`);
+        core.setOutput('size', fileSize);
         const readFile = util_1.default.promisify(fs_1.default.readFile);
         const contentBuffer = await readFile(filePath, encoding);
         const contents = contentBuffer.toString();
