@@ -28,6 +28,7 @@ describe('action', () => {
   })
 
   it('sets the path output', async () => {
+   expect(setOutputMock).toHaveBeenNthCalledWith(2, 'size', expect.any(Number))
     // Set the action's inputs as return values from core.getInput()
     getInputMock.mockImplementation((name: string): string => {
       if (name === 'path') return 'sample.txt'
