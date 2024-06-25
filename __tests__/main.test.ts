@@ -20,6 +20,7 @@ const runMock = jest.spyOn(main, 'run')
 
 // The expected content of file sample.txt
 const expectedContent = 'Sample text file for tests'
+const expectedFileSize = 26
 const expectedError = 'ENOENT: no such file or directory, open .+?'
 
 describe('action', () => {
@@ -27,8 +28,7 @@ describe('action', () => {
     jest.clearAllMocks()
   })
 
-  it('sets the path output', async () => {
-   expect(setOutputMock).toHaveBeenNthCalledWith(2, 'size', expect.any(Number))
+  it('sets the path output', async () => {   
     // Set the action's inputs as return values from core.getInput()
     getInputMock.mockImplementation((name: string): string => {
       if (name === 'path') return 'sample.txt'
@@ -41,10 +41,19 @@ describe('action', () => {
     // Verify that all of the core library functions were called correctly
     expect(infoMock).toHaveBeenNthCalledWith(
       1,
+      `File size:\n${expectedFileSize}`
+    )
+    expect(setOutputMock).toHaveBennNthCalledWith(
+      1,
+      `fileSize`,
+      expectedFileSize
+    )
+    expect(infoMock).toHaveBeenNthCalledWith(
+      2,
       `File contents:\n${expectedContent}`
     )
     expect(setOutputMock).toHaveBeenNthCalledWith(
-      1,
+      2,
       'contents',
       expectedContent
     )
