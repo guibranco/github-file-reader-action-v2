@@ -89,6 +89,7 @@
     "prettier": "^3.3.2",
     "prettier-eslint": "^16.3.0",
     "ts-jest": "^29.1.5",
+    "gitversion": "^5.8.1",
     "typescript": "^5.5.2"
   }
 }
