@@ -21,7 +21,7 @@ const runMock = jest.spyOn(main, 'run')
 // The expected content of file sample.txt
 const expectedContent = 'Sample text file for tests'
 const expectedFileSize = 26
-const expectedError = 'ENOENT: no such file or directory, open .+?'
+const expectedError = 'ENOENT: no such file or directory, stat .+?'
 
 describe('action', () => {
   beforeEach(() => {
