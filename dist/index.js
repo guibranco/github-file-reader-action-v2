@@ -2754,7 +2754,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = void 0;
+exports.run = run;
 const core = __importStar(__nccwpck_require__(186));
 const fs_1 = __importDefault(__nccwpck_require__(147));
 const util_1 = __importDefault(__nccwpck_require__(837));
@@ -2780,7 +2780,6 @@ async function run() {
         core.setFailed(error.message);
     }
 }
-exports.run = run;
 
 
 /***/ }),
