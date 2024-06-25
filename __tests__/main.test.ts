@@ -43,7 +43,7 @@ describe('action', () => {
       1,
       `File size:\n${expectedFileSize}`
     )
-    expect(setOutputMock).toHaveBennNthCalledWith(1, `size`, expectedFileSize)
+    expect(setOutputMock).toHaveBeenNthCalledWith(1, `size`, expectedFileSize)
     expect(infoMock).toHaveBeenNthCalledWith(
       2,
       `File contents:\n${expectedContent}`
