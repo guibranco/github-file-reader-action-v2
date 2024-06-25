@@ -28,7 +28,7 @@ describe('action', () => {
     jest.clearAllMocks()
   })
 
-  it('sets the path output', async () => {   
+  it('sets the path output', async () => {
     // Set the action's inputs as return values from core.getInput()
     getInputMock.mockImplementation((name: string): string => {
       if (name === 'path') return 'sample.txt'
@@ -43,11 +43,7 @@ describe('action', () => {
       1,
       `File size:\n${expectedFileSize}`
     )
-    expect(setOutputMock).toHaveBennNthCalledWith(
-      1,
-      `size`,
-      expectedFileSize
-    )
+    expect(setOutputMock).toHaveBennNthCalledWith(1, `size`, expectedFileSize)
     expect(infoMock).toHaveBeenNthCalledWith(
       2,
       `File contents:\n${expectedContent}`

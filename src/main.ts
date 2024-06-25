@@ -15,7 +15,7 @@ export async function run(): Promise<void> {
     core.info(`File size:\n${fileSize}`)
     core.setOutput('size', fileSize)
     const readFile = util.promisify(fs.readFile)
-    const contentBuffer = await readFile(filePath, encoding as BufferEncoding)  
+    const contentBuffer = await readFile(filePath, encoding as BufferEncoding)
     const contents: string = contentBuffer.toString()
     core.info(`File contents:\n${contents}`)
     core.setOutput('contents', contents)
