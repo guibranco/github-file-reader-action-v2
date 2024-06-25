@@ -1,7 +1,6 @@
 import * as core from '@actions/core'
 import fs from 'fs'
 import util from 'util'
-import { statSync } from 'fs'
 
 /**
  * The main function for the action.
@@ -11,11 +10,12 @@ export async function run(): Promise<void> {
   try {
     const filePath: string = core.getInput('path')
     const encoding: string = core.getInput('encoding')
-   const stats = statSync(filePath)
-   const fileSize = stats.size
+    const stats = fs.statSync(filePath)
+    const fileSize = stats.size
+    core.info(`File size:\n${fileSize}`)
+    core.setOutput('size', fileSize)
     const readFile = util.promisify(fs.readFile)
-    const contentBuffer = await readFile(filePath, encoding as BufferEncoding)
-   core.setOutput('size', fileSize)
+    const contentBuffer = await readFile(filePath, encoding as BufferEncoding)  
     const contents: string = contentBuffer.toString()
     core.info(`File contents:\n${contents}`)
     core.setOutput('contents', contents)
