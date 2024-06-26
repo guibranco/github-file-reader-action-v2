@@ -14,11 +14,11 @@
 
 GitHub Action to read the contents of a file
 
-> **Warning**
+> [!Warning]
 >
-> **Disclaimer:** This version was created because the [original (V1)](https://github.com/andstor/file-reader-action) has not been updated by the creator for a while.
+> **Disclaimer:** This version was created because the creator has not updated the [original (V1)](https://github.com/andstor/file-reader-action) for a while.
 
-This is a GitHub Action that reads the contents of a file. Give it a path to a file, and it will provide you with its contents, accessible through an output variable.
+This is a GitHub Action that reads a file's contents. If you give it a path to a file, it will provide its contents and file size, accessible through an output variable.
 
 ## Usage
 
@@ -43,6 +43,7 @@ The following input variable options can/must be configured:
 ## Outputs
 
 - `contents`: The contents of the file.
+- `size`: The size of the file.
 
 ## Example
 
@@ -65,6 +66,9 @@ jobs:
 
       - name: File contents
         run: echo "${ steps.read_file.outputs.contents }"
+
+      - name: File size
+        run: echo "${ steps.read_file.outputs.size }"
 ```
 
 ## License
