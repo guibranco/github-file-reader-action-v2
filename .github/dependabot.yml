@@ -14,6 +14,10 @@ updates:
     - "npm"
     - "javascript"
     - "dependencies"
+  groups:
+    TSESLint:
+      patterns:
+        - "*typescript-eslint*"
 
 - package-ecosystem: "github-actions"
   directory: "/"
