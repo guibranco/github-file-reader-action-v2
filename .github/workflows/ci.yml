@@ -65,13 +65,29 @@ jobs:
     if: github.event_name != 'pull_request'
     steps:
      
-    - name: Create Release
-      uses: ncipollo/release-action@v1.14.0
-      with:
-        allowUpdates: false
-        draft: false
-        makeLatest: true
-        tag: v2.2.${{ github.run_number }}
-        name: Release v2.2.${{ github.run_number }}
-        generateReleaseNotes: true
-        body: Release 2.2.${{ github.run_number }} of GitHub Actions File Reader V2
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v2
+        with:
+          versionSpec: "5.x"
+
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v2
+        with:
+          useConfigFile: true
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          allowUpdates: false
+          skipIfReleaseExists: true
+          draft: false
+          makeLatest: true
+          tag: v${{ steps.gitversion.outputs.semVer }}
+          name: Release v${{ steps.gitversion.outputs.semVer }}
+          generateReleaseNotes: true
+          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
