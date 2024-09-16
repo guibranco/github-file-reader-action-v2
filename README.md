@@ -14,7 +14,7 @@
 
 GitHub Action to read the contents of a file
 
-> [!Warning]
+> [!Important]
 >
 > **Disclaimer:** This version was created because the creator has not updated the [original (V1)](https://github.com/andstor/file-reader-action) for a while.
 
@@ -27,6 +27,7 @@ The following example [workflow step](https://help.github.com/en/actions/configu
 ```yml
 - name: "Read file contents"
   uses: guibranco/github-file-reader-action-v2@latest
+  id: read_file
   with:
     path: "package.json"
 ```
