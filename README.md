@@ -61,6 +61,7 @@ jobs:
 
       - name: Read file contents
         uses: guibranco/github-file-reader-action-v2@latest
+        id: read_file
         with:
           path: "package.json"
 
