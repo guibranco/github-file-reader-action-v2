@@ -1,16 +1,15 @@
-<p align="center">
-  <a href="https://github.com/guibranco/github-file-reader-action-v2">
-    <img src="https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/ci.yml/badge.svg" alt="CI status">
-  </a>
-  <a href="https://github.com/guibranco/github-file-reader-action-v2">
-    <img src="https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/linter.yml/badge.svg" alt="Linter status">
-  </a>
-  <a href="https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2">
-    <img src="https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2.svg" alt="wakatime">
-  </a>
-</p>
-
 # GitHub File Reader Action V2
+
+[![GitHub repo](https://img.shields.io/badge/GitHub-guibranco%2Fgithub--file--reader--action--v2-green.svg?style=plastic&logo=github)](https://github.com/guibranco/github-file-reader-action-v2 "shields.io")
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/guibranco/github-file-reader-action-v2?color=green&label=Code%20size&style=plastic&logo=github)](https://github.com/guibranco/github-file-reader-action-v2 "shields.io")
+[![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-file-reader-action-v2?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-file-reader-action-v2 "shields.io")
+[![GitHub license](https://img.shields.io/github/license/guibranco/github-file-reader-action-v2?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-file-reader-action-v2 "shields.io")
+
+![Check Dist](https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/check-dist.yml/badge.svg)
+![CI](https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/ci.yml/badge.svg)
+![CodeQL](https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/codeql.yml/badge.svg)
+![Linter](https://github.com/guibranco/github-file-reader-action-v2/actions/workflows/linter.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2.svg)](https://wakatime.com/badge/github/guibranco/github-file-reader-action-v2)
 
 GitHub Action to read the contents of a file
 
