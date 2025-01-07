@@ -48,7 +48,7 @@ if [ -z "$AI_MESSAGE" ] || echo "$AI_MESSAGE" | grep -q '^[[:space:]]*$'; then
 fi
 
 # Write the new commit message back to the file
-if ! echo "$AI_MESSAGE" > "$COMMIT_MSG_FILE" 2>/dev/null; then
+if ! echo "$AI_MESSAGE" >"$COMMIT_MSG_FILE" 2>/dev/null; then
     echo "Error: Failed to write new commit message" >&2
     cp "${COMMIT_MSG_FILE}.bak" "$COMMIT_MSG_FILE"
     rm "${COMMIT_MSG_FILE}.bak"
