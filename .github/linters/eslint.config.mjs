@@ -27,7 +27,6 @@ export default [{
         "**/dist/",
         "**/node_modules/",
         "**/coverage/",
-        "**/No newline at end of file",
     ],
 }, ...compat.extends(
     "eslint:recommended",
