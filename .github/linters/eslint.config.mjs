@@ -27,7 +27,6 @@ export default [{
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:github/recommended",
     "plugin:jest/recommended",
 ), {
     plugins: {
