@@ -24,9 +24,6 @@ export default [{
         "**/*.json",
         "**/@@ -1,4 +0,0 @@",
         "**/lib/",
-        "**/dist/",
-        "**/node_modules/",
-        "**/coverage/",
     ],
 }, ...compat.extends(
     "eslint:recommended",
