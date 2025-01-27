@@ -34,7 +34,7 @@
     "ci-test": "jest",
     "format:write": "prettier --write **/*.ts",
     "format:check": "prettier --check **/*.ts",
-    "lint": "npx eslint . -c ./.github/linters/.eslintrc.yml",
+    "lint": "npx eslint . -c ./.github/linters/eslint.config.mjs",
     "package": "ncc build src/index.ts --license licenses.txt",
     "package:watch": "npm run package -- --watch",
     "test": "(jest && make-coverage-badge --output-path ./badges/coverage.svg) || make-coverage-badge --output-path ./badges/coverage.svg",
