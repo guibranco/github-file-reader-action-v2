@@ -1,4 +1,6 @@
 import jest from 'eslint-plugin-jest'
+import githubPlugin from 'eslint-plugin-github';
+import prettierPlugin from 'eslint-plugin-prettier';
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import globals from 'globals'
 import tsParser from '@typescript-eslint/parser'
@@ -31,7 +33,6 @@ export default [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:github/recommended',
     'plugin:jest/recommended',
   ),
   {
@@ -66,7 +67,6 @@ export default [
       'import/no-namespace': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off',
-      'prettier/prettier': 'error',
       'filenames/match-regex': 'off',
       semi: 'off',
       '@typescript-eslint/array-type': 'error',
@@ -112,6 +112,40 @@ export default [
       '@typescript-eslint/restrict-plus-operands': 'error',
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/unbound-method': 'error'
+    }
+  },
+  {
+    files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
+    plugins: {
+      github: githubPlugin
+    },
+    rules: {
+      'github/array-foreach': 'error',
+      'github/async-currenttarget': 'error',
+      'github/no-blur': 'warn',
+      'github/no-inner-html': 'error',
+      'github/no-then': 'warn',
+      'github/prefer-observers': 'warn',
+      'github/unescaped-html-literal': 'error'
+    }
+  },
+  {
+    files: ['**/*.{js,ts,jsx,tsx,json}'],
+    plugins: {
+      prettier: prettierPlugin
+    },
+    rules: {
+      'prettier/prettier': 'error'
+    }
+  },
+  {
+    files: ['**/*.{js,ts,jsx,tsx}'],
+    plugins: {
+      github: githubPlugin,
+      prettier: prettierPlugin
+    },
+    rules: {
+      'prettier/prettier': 'error'
     }
   }
 ]
