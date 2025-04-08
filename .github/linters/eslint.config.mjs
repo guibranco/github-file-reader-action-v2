@@ -1,4 +1,5 @@
 import jest from 'eslint-plugin-jest'
+import githubPlugin from 'eslint-plugin-github';
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import globals from 'globals'
 import tsParser from '@typescript-eslint/parser'
@@ -114,16 +115,18 @@ export default [
     }
   },
   {
-  "plugins": ["github"],
-  "rules": {
-    "github/array-foreach": "warn",
-    "github/async-currenttarget": "warn",
-    "github/no-blur": "warn",
-    "github/no-inner-html": "warn",
-    "github/no-then": "warn",
-    "github/prefer-observers": "warn",
-    "github/unescaped-html-literal": "warn"
+    files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
+    plugins: {
+      github: githubPlugin
+    },
+    rules: {
+      'github/array-foreach': 'error',
+      'github/async-currenttarget': 'error',
+      'github/no-blur': 'warn',
+      'github/no-inner-html': 'error',
+      'github/no-then': 'warn',
+      'github/prefer-observers': 'warn',
+      'github/unescaped-html-literal': 'error'
+    }
   }
-}
-
 ]
