@@ -1,5 +1,6 @@
 import jest from 'eslint-plugin-jest'
 import githubPlugin from 'eslint-plugin-github';
+import prettierPlugin from 'eslint-plugin-prettier';
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import globals from 'globals'
 import tsParser from '@typescript-eslint/parser'
@@ -66,7 +67,6 @@ export default [
       'import/no-namespace': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off',
-      'prettier/prettier': 'error',
       'filenames/match-regex': 'off',
       semi: 'off',
       '@typescript-eslint/array-type': 'error',
@@ -127,6 +127,15 @@ export default [
       'github/no-then': 'warn',
       'github/prefer-observers': 'warn',
       'github/unescaped-html-literal': 'error'
+    }
+  },
+  {
+    files: ['**/*.{js,ts,jsx,tsx,json}'],
+    plugins: {
+      prettier: prettierPlugin
+    },
+    rules: {
+      'prettier/prettier': 'error'
     }
   }
 ]
