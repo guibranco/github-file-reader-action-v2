@@ -31,7 +31,6 @@ export default [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:github/recommended',
     'plugin:jest/recommended',
   ),
   {
@@ -113,5 +112,18 @@ export default [
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/unbound-method': 'error'
     }
+  },
+  {
+  "plugins": ["github"],
+  "rules": {
+    "github/array-foreach": "warn",
+    "github/async-currenttarget": "warn",
+    "github/no-blur": "warn",
+    "github/no-inner-html": "warn",
+    "github/no-then": "warn",
+    "github/prefer-observers": "warn",
+    "github/unescaped-html-literal": "warn"
   }
+}
+
 ]
