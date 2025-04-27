@@ -74,6 +74,24 @@ jobs:
 
 ## License
 
+## Local Development
+
+This project includes [@github/local-action](https://github.com/github/local-action) to help with local development and testing of the action. This tool stubs out various [GitHub Actions Toolkit](https://github.com/actions/toolkit/tree/main) functionality to run TypeScript/JavaScript actions locally.
+
+### Setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the action locally:
+   ```bash
+   npx local-action
+   ```
+
+This allows you to test the action without having to commit and push changes to GitHub, making the development process faster and more efficient.
+
 Copyright © 2024 [André Storhaug](https://github.com/andstor), [GuiBranco](https://github.com/guibranco).
 
 file-reader-action-v2 is licensed under the [MIT License](https://github.com/guibranco/github-file-reader-action-v2/blob/main/LICENSE).
