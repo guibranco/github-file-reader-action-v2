@@ -92,6 +92,7 @@
     "prettier": "^3.5.3",
     "prettier-eslint": "^16.4.1",
     "ts-jest": "^29.3.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "@github/local-action": "^1.0.0"
   }
 }
