@@ -1,6 +1,6 @@
 import jest from 'eslint-plugin-jest'
-import githubPlugin from 'eslint-plugin-github';
-import prettierPlugin from 'eslint-plugin-prettier';
+import githubPlugin from 'eslint-plugin-github'
+import prettierPlugin from 'eslint-plugin-prettier'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import globals from 'globals'
 import tsParser from '@typescript-eslint/parser'
@@ -33,7 +33,7 @@ export default [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
+    'plugin:jest/recommended'
   ),
   {
     plugins: {
@@ -47,7 +47,7 @@ export default [
         ...globals.jest,
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
-        BufferEncoding: 'readonly',
+        BufferEncoding: 'readonly'
       },
 
       parser: tsParser,
