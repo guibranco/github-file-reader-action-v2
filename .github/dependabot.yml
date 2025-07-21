@@ -1,33 +1,33 @@
 version: 2
 
 updates:
-- package-ecosystem: "npm"
-  directory: "/"
-  schedule:
-    interval: weekly
-  open-pull-requests-limit: 50
-  assignees: 
-    - "guibranco"
-  reviewers: 
-    - "guibranco"
-  labels:
-    - "npm"
-    - "javascript"
-    - "dependencies"
-  groups:
-    TSESLint:
-      patterns:
-        - "*typescript-eslint*"
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 50
+    assignees:
+      - 'guibranco'
+    reviewers:
+      - 'guibranco'
+    labels:
+      - 'npm'
+      - 'javascript'
+      - 'dependencies'
+    groups:
+      TSESLint:
+        patterns:
+          - '*typescript-eslint*'
 
-- package-ecosystem: "github-actions"
-  directory: "/"
-  schedule:
-    interval: weekly
-  open-pull-requests-limit: 50
-  assignees: 
-    - "guibranco"
-  reviewers: 
-    - "guibranco"
-  labels:
-    - "github-actions"
-    - "dependencies"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 50
+    assignees:
+      - 'guibranco'
+    reviewers:
+      - 'guibranco'
+    labels:
+      - 'github-actions'
+      - 'dependencies'
