@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.31.0",
+    "@eslint/js": "^9.32.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.15",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
@@ -86,7 +86,7 @@
     "eslint-plugin-jsonc": "^2.20.1",
     "eslint-plugin-prettier": "^5.5.3",
     "globals": "^16.3.0",
-    "jest": "^30.0.4",
+    "jest": "^30.0.5",
     "js-yaml": "^4.1.0",
     "make-coverage-badge": "^1.2.0",
     "prettier": "^3.6.2",
