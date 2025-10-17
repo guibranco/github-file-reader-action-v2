@@ -81,7 +81,7 @@ jobs:
         id: gitversion
         uses: gittools/actions/gitversion/execute@v4
 
-      - name: Create Release
+      - name: Create Release (tag)
         uses: ncipollo/release-action@v1.20.0
         with:
           allowUpdates: false
@@ -92,5 +92,17 @@ jobs:
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
           body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{
-            github.event.repository.name }}
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+
+      - name: Create Release (latest)
+        uses: ncipollo/release-action@v1.20.0
+        with:
+          allowUpdates: true
+          skipIfReleaseExists: false
+          draft: false
+          makeLatest: false
+          tag: latest
+          name: Release v${{ steps.gitversion.outputs.semVer }}
+          generateReleaseNotes: true
+          body:
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
