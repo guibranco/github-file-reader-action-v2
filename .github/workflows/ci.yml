@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
         id: setup-node
@@ -49,7 +49,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Test Local Action
         id: test-action
@@ -68,7 +68,7 @@ jobs:
     if: github.event_name != 'pull_request'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -81,8 +81,8 @@ jobs:
         id: gitversion
         uses: gittools/actions/gitversion/execute@v4
 
-      - name: Create Release
-        uses: ncipollo/release-action@v1.18.0
+      - name: Create Release (tag)
+        uses: ncipollo/release-action@v1.20.0
         with:
           allowUpdates: false
           skipIfReleaseExists: true
@@ -92,5 +92,17 @@ jobs:
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
           body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{
-            github.event.repository.name }}
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+
+      - name: Create Release (latest)
+        uses: ncipollo/release-action@v1.20.0
+        with:
+          allowUpdates: true
+          skipIfReleaseExists: false
+          draft: false
+          makeLatest: false
+          tag: latest
+          name: Release v${{ steps.gitversion.outputs.semVer }}
+          generateReleaseNotes: true
+          body:
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
