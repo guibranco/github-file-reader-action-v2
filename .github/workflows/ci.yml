@@ -22,7 +22,7 @@ jobs:
 
       - name: Setup Node.js
         id: setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
@@ -87,7 +87,7 @@ jobs:
           allowUpdates: false
           skipIfReleaseExists: true
           draft: false
-          makeLatest: true
+          makeLatest: false
           tag: v${{ steps.gitversion.outputs.semVer }}
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
@@ -100,7 +100,7 @@ jobs:
           allowUpdates: true
           skipIfReleaseExists: false
           draft: false
-          makeLatest: false
+          makeLatest: true
           tag: latest
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
