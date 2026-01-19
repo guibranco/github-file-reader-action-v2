@@ -76,7 +76,7 @@
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.0.6",
+    "@types/node": "^25.0.9",
     "@typescript-eslint/eslint-plugin": "^8.53.0",
     "@typescript-eslint/parser": "^8.44.0",
     "@vercel/ncc": "^0.38.4",
@@ -89,7 +89,7 @@
     "jest": "^30.2.0",
     "js-yaml": "^4.1.1",
     "make-coverage-badge": "^1.2.0",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "prettier-eslint": "^16.4.2",
     "ts-jest": "^29.4.6",
     "typescript": "^5.9.3"
