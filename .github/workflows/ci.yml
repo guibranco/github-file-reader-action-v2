@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
   test-typescript:
@@ -19,6 +20,8 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         id: setup-node
@@ -42,6 +45,20 @@ jobs:
       - name: Test
         id: npm-ci-test
         run: npm run ci-test
+
+      - name: Upload Coverage Report
+        id: upload-coverage
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report
+          path: coverage/
+
+      - name: SonarCloud Scan
+        id: sonar-scan
+        uses: SonarSource/sonarcloud-github-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   test-action:
     name: GitHub Actions Test
