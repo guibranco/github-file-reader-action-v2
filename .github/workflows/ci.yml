@@ -5,10 +5,9 @@ on:
   push:
     branches:
       - main
-      - 'releases/*'
+      - "releases/*"
 
 permissions:
-  contents: write
   pull-requests: read
 
 jobs:
@@ -72,7 +71,7 @@ jobs:
         id: test-action
         uses: ./
         with:
-          path: 'README.md'
+          path: "README.md"
 
       - name: Print Output
         id: output
@@ -80,9 +79,11 @@ jobs:
 
   create-release:
     name: Create release
-    needs: [test-typescript, test-action]
+    needs: [ test-typescript, test-action ]
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -92,7 +93,7 @@ jobs:
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v4
         with:
-          versionSpec: '6.x'
+          versionSpec: "6.x"
 
       - name: Determine Version
         id: gitversion
@@ -108,8 +109,8 @@ jobs:
           tag: v${{ steps.gitversion.outputs.semVer }}
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
-          body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{
+            github.event.repository.name }}
 
       - name: Create Release (latest)
         uses: ncipollo/release-action@v1.21.0
@@ -121,5 +122,5 @@ jobs:
           tag: latest
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
-          body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{
+            github.event.repository.name }}
