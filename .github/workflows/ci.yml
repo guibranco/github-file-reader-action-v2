@@ -5,8 +5,10 @@ on:
   push:
     branches:
       - main
-      - 'releases/*'
+      - "releases/*"
 
+permissions:
+  pull-requests: read
 
 jobs:
   test-typescript:
@@ -17,6 +19,8 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         id: setup-node
@@ -41,6 +45,20 @@ jobs:
         id: npm-ci-test
         run: npm run ci-test
 
+      - name: Upload Coverage Report
+        id: upload-coverage
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report
+          path: coverage/
+
+      - name: SonarCloud Scan
+        id: sonar-scan
+        uses: SonarSource/sonarcloud-github-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
   test-action:
     name: GitHub Actions Test
     runs-on: ubuntu-latest
@@ -53,7 +71,7 @@ jobs:
         id: test-action
         uses: ./
         with:
-          path: 'README.md'
+          path: "README.md"
 
       - name: Print Output
         id: output
@@ -61,7 +79,7 @@ jobs:
 
   create-release:
     name: Create release
-    needs: [test-typescript, test-action]
+    needs: [ test-typescript, test-action ]
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
     permissions:
@@ -75,7 +93,7 @@ jobs:
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v4
         with:
-          versionSpec: '6.x'
+          versionSpec: "6.x"
 
       - name: Determine Version
         id: gitversion
@@ -91,8 +109,8 @@ jobs:
           tag: v${{ steps.gitversion.outputs.semVer }}
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
-          body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{
+            github.event.repository.name }}
 
       - name: Create Release (latest)
         uses: ncipollo/release-action@v1.21.0
@@ -104,5 +122,5 @@ jobs:
           tag: latest
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
-          body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{
+            github.event.repository.name }}
